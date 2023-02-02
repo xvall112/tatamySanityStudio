@@ -156,6 +156,7 @@ export const deskStructure = (S) =>
             'superfight',
             'open',
             'menuItem',
+            'media.tag',
           ].includes(listItem.getId())
       ),
     ])

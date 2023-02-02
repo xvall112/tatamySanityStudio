@@ -16,7 +16,26 @@ import localeString from './components/localeString'
 import localeText from './components/localeText'
 import localeBlock from './components/localeBlock'
 import menuItem from './menuItem'
+import lineOfHarmonogram from './components/lineOfHarmonogram'
 
-
-export const schemaTypes = [menuItem,localeBlock,localeText,localeString,gala,superfight,open,carousels,organization,documents,news, videos,blockContent, partners,nextTournaments,homePage,pastTournaments,champions]
-
+export const schemaTypes = [
+  lineOfHarmonogram,
+  menuItem,
+  localeBlock,
+  localeText,
+  localeString,
+  gala,
+  superfight,
+  open,
+  carousels,
+  organization,
+  documents,
+  news,
+  videos,
+  blockContent,
+  partners,
+  nextTournaments,
+  homePage,
+  pastTournaments,
+  champions,
+]
