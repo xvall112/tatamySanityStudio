@@ -8,6 +8,12 @@ export default defineType({
   icon: TfiLayoutCtaCenter,
   fields: [
     defineField({
+      name: 'subtitle',
+      title: 'Subtitle',
+      type: 'string',
+      validation: Rule => Rule.required()
+    }),
+    defineField({
         name: 'title',
         title: 'Title',
         type: 'string',
