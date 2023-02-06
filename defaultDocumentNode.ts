@@ -12,17 +12,14 @@ function getPreviewUrl(doc: SanityDocument) {
 // Import this into the deskTool() plugin
 export const defaultDocumentNode: DefaultDocumentNodeResolver = (S, {schemaType}) => {
   // Only show preview pane on `movie` schema type documents
- 
-   
-      return S.document().views([
-        S.view.form(),
-        S.view
-          .component(Iframe)
-          .options({
-            url: (doc: SanityDocument) => getPreviewUrl(doc),
-          })
-          .title('Preview'),
-      ])
-    
-  
+
+  return S.document().views([
+    S.view.form(),
+    S.view
+      .component(Iframe)
+      .options({
+        url: (doc: SanityDocument) => getPreviewUrl(doc),
+      })
+      .title('Preview'),
+  ])
 }

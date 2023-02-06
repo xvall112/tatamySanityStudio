@@ -1,13 +1,11 @@
 import {defineConfig} from 'sanity'
-import {  dashboardTool,
-  projectUsersWidget,
-  projectInfoWidget, } from "@sanity/dashboard";
+import {dashboardTool, projectUsersWidget, projectInfoWidget} from '@sanity/dashboard'
 import {deskTool} from 'sanity/desk'
 import {visionTool} from '@sanity/vision'
 import {schemaTypes} from './schemas'
 import {deskStructure} from './deskStructure'
 import {media} from 'sanity-plugin-media'
-import { defaultDocumentNode } from './defaultDocumentNode'
+import {defaultDocumentNode} from './defaultDocumentNode'
 
 export default defineConfig({
   name: 'default',
@@ -17,14 +15,12 @@ export default defineConfig({
   dataset: 'production',
 
   plugins: [
-    
     deskTool({
       defaultDocumentNode,
       structure: deskStructure,
     }),
     media(),
-    dashboardTool({ widgets: [projectInfoWidget(),
-      projectUsersWidget()]}),
+    dashboardTool({widgets: [projectInfoWidget(), projectUsersWidget()]}),
     visionTool(),
   ],
 

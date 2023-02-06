@@ -9,18 +9,18 @@ export default defineType({
       name: 'title',
       title: 'Title',
       type: 'localeString',
-      validation: Rule => Rule.required()
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
-        name: 'slug',
-        title: 'Slug',
-        type: 'slug',
-        validation: Rule => Rule.required()
-      }),
-    ],
-    preview: {
-        select: {
-          title: 'title.cs',
-        }
-      }
+      name: 'slug',
+      title: 'Slug',
+      type: 'slug',
+      validation: (Rule) => Rule.required(),
+    }),
+  ],
+  preview: {
+    select: {
+      title: 'title.cs',
+    },
+  },
 })
