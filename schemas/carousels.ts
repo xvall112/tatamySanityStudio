@@ -27,5 +27,12 @@ export default defineType({
       type: 'string',
       validation: (Rule) => Rule.required(),
     }),
+    defineField({
+      name: 'date',
+      title: 'Event date',
+      type: 'datetime',
+      description: 'volitelná položka, pokud zadáš -> odpocitavání v carouselu'
+      
+    }),
   ],
 })
