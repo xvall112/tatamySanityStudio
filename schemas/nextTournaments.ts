@@ -4,6 +4,17 @@ import {isUniqueAcrossAllDocuments} from '../lib/isUniqueAcrossAllDocuments'
 export default defineType({
   name: 'nextTournaments',
   title: 'Next Tournaments',
+  fieldsets: [
+    {
+      name: 'titleImage',
+      title: 'Title Image',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: false, // Defines if the fieldset should be collapsed by default or not
+        modal: {type: 'popover'}, //Makes the modal type a popover
+      },
+    },
+  ],
   type: 'document',
   fields: [
     defineField({
@@ -15,7 +26,21 @@ export default defineType({
     defineField({
       name: 'titleImage',
       title: 'Title Image',
+      fieldset: 'titleImage',
+      description:"big screen title image",
       type: 'image',
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'mobileTitleImage',
+      title: 'Mobile Title Image',
+      type: 'image',
+      fieldset: 'titleImage',
+      description:"mobile screen title image",
       options: {
         hotspot: true, // <-- Defaults to false
       },

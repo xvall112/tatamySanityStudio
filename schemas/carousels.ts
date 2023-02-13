@@ -4,6 +4,17 @@ export default defineType({
   name: 'carousels',
   title: 'Carousels',
   type: 'document',
+  fieldsets: [
+    {
+      name: 'image',
+      title: 'Image',
+      options: {
+        collapsible: true, // Makes the whole fieldset collapsible
+        collapsed: false, // Defines if the fieldset should be collapsed by default or not
+        modal: {type: 'popover'}, //Makes the modal type a popover
+      },
+    },
+  ],
   fields: [
     defineField({
       name: 'name',
@@ -15,6 +26,20 @@ export default defineType({
       name: 'image',
       title: 'Image',
       type: 'image',
+      description:"big screen image",
+      fieldset: 'image',
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'imageMobile',
+      title: 'Mobile Image',
+      type: 'image',
+      fieldset: 'image',
+      description:"mobile screen image => rectangle",
       options: {
         hotspot: true, // <-- Defaults to false
       },
