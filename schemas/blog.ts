@@ -92,7 +92,7 @@ export default defineType({
         validation: (Rule) => Rule.required(),
         options: {
           isUnique: isUniqueAcrossAllDocuments,
-          source: 'name',
+          source: 'title.cs',
         },
       }),
   ],
