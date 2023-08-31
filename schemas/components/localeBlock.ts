@@ -10,7 +10,7 @@ export default defineType({
       title: lang.title,
       name: lang.id,
       type: 'array',
-      of: [{type: 'block'}, {type: 'instagramPost'}],
+      of: [{type: 'block'}, {type: 'instagramPost'}, {type:'image'}],
     })
   ),
 })

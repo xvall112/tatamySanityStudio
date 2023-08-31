@@ -18,6 +18,7 @@ import localeBlock from './components/localeBlock'
 import menuItem from './menuItem'
 import lineOfHarmonogram from './components/lineOfHarmonogram'
 import instagramPost from './components/instagramPost'
+import blog from './blog'
 
 export const schemaTypes = [
   instagramPost,
@@ -40,4 +41,5 @@ export const schemaTypes = [
   homePage,
   pastTournaments,
   champions,
+  blog,
 ]
