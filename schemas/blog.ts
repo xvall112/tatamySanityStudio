@@ -85,6 +85,16 @@ export default defineType({
       title: 'Link to Gallery',
       type: 'url',
     }),
+    defineField({
+        name: 'slug',
+        title: 'Slug',
+        type: 'slug',
+        validation: (Rule) => Rule.required(),
+        options: {
+          isUnique: isUniqueAcrossAllDocuments,
+          source: 'name',
+        },
+      }),
   ],
   preview: {
     select: {
