@@ -74,6 +74,11 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
     defineField({
+      name: 'video',
+      title: 'Video',
+      type: 'url',
+    }),
+    defineField({
       name: 'gallery',
       title: 'Gallery',
       type: 'array',
