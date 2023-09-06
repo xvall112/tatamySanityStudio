@@ -1,5 +1,6 @@
 import {defineType, defineArrayMember} from 'sanity'
-import {TfiLayoutCtaCenter} from 'react-icons/tfi'
+
+
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -36,7 +37,7 @@ export default defineType(
           { title: "Underline", value: "underline" },
           { title: "Strike", value: "strike-through" },
         
-          { title: 'Left', value: 'left', icon: TfiLayoutCtaCenter }, 
+          { title: 'Left', value: 'left',}, 
           { title: 'Left', value: 'left' },
           { title: 'Center', value: 'center' },
           { title: 'Right', value: 'right' },

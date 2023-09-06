@@ -4,7 +4,6 @@ import {AiOutlineAlignCenter} from 'react-icons/Ai'
 import {AiOutlineAlignLeft} from 'react-icons/Ai'
 import {AiOutlineAlignRight} from 'react-icons/Ai'
 import {FaAlignJustify} from 'react-icons/Fa'
-import {component} from 'sanity/desk'
 
 const AlignCenter = (props) => <div style={{textAlign: 'center'}}>{props.children}</div>
 const AlignLeft = (props) => <div style={{textAlign: 'left'}}>{props.children}</div>
@@ -31,6 +30,7 @@ export default defineType({
             {title: 'H4', value: 'h4'},
             {title: 'Quote', value: 'blockquote'},
           ],
+
           lists: [{title: 'Bullet', value: 'bullet'}],
 
           // Marks let you mark up inline text in the block editor.
