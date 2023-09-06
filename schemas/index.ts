@@ -42,4 +42,5 @@ export const schemaTypes = [
   pastTournaments,
   champions,
   blog,
+
 ]
