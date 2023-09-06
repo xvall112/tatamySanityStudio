@@ -1,9 +1,5 @@
 import {defineField, defineType} from 'sanity'
 import {supportedLanguages} from '../../lang/supportedLanguages'
-import {AiOutlineAlignCenter} from 'react-icons/Ai'
-import {AiOutlineAlignLeft} from 'react-icons/Ai'
-import {AiOutlineAlignRight} from 'react-icons/Ai'
-import {FaAlignJustify} from 'react-icons/Fa'
 
 const AlignCenter = (props) => <div style={{textAlign: 'center'}}>{props.children}</div>
 const AlignLeft = (props) => <div style={{textAlign: 'left'}}>{props.children}</div>
@@ -43,15 +39,14 @@ export default defineType({
               {title: 'Code', value: ' code'},
               {title: 'Underline', value: 'underline'},
               {title: 'Strike', value: 'strike-through'},
-              {title: 'Left', value: 'left', icon: AiOutlineAlignLeft, component: AlignLeft},
+              {title: 'Left', value: 'left', component: AlignLeft},
               {
                 title: 'Center',
                 value: 'center',
-                icon: AiOutlineAlignCenter,
                 component: AlignCenter,
               },
-              {title: 'Right', value: 'right', icon: AiOutlineAlignRight, component: AlignRight},
-              {title: 'Justify', value: 'justify', icon: FaAlignJustify, component: AlignJustify},
+              {title: 'Right', value: 'right', component: AlignRight},
+              {title: 'Justify', value: 'justify', component: AlignJustify},
             ],
             // Annotations can be any object structure – e.g. a link or a footnote.
             annotations: [
