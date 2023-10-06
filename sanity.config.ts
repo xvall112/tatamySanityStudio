@@ -6,6 +6,7 @@ import {schemaTypes} from './schemas'
 import {deskStructure} from './deskStructure'
 import {media} from 'sanity-plugin-media'
 import {defaultDocumentNode} from './defaultDocumentNode'
+import { netlifyWidget } from "sanity-plugin-dashboard-widget-netlify";
 
 export default defineConfig({
   name: 'default',
@@ -20,7 +21,24 @@ export default defineConfig({
       structure: deskStructure,
     }),
     media(),
-    dashboardTool({widgets: [projectInfoWidget(), projectUsersWidget()]}),
+    dashboardTool({widgets: [netlifyWidget({
+      title: 'Update TATAMY web',
+      sites: [
+        // {
+        //   title: 'Sanity Studio',
+        //   apiId: 'xxxxx-yyyy-zzzz-xxxx-yyyyyyyy',
+        //   buildHookId: 'xxxyyyxxxyyyyxxxyyy',
+        //   name: 'sanity-gatsby-blog-20-studio',
+        // },
+        {
+          title: 'Website',
+          apiId: '46c2b0a5-f18b-46b7-924a-4d58c1b6267b',
+          buildHookId: '651fd8d1fa6cf20be7dac03e',
+          name: 'tatamy.cz',
+         
+        }
+      ]
+  }), projectInfoWidget(), projectUsersWidget()]}),
     visionTool(),
   ],
 
