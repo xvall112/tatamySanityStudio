@@ -2,7 +2,7 @@ import {defineType, defineArrayMember} from 'sanity'
 // import {AiOutlineAlignCenter} from 'react-icons/Ai'
 // import {AiOutlineAlignLeft} from 'react-icons/Ai'
 // import {AiOutlineAlignRight} from 'react-icons/Ai'
-import {FaAlignJustify} from 'react-icons/Fa'
+// import {FaAlignJustify} from 'react-icons/Fa'
 
 const AlignCenter = (props) => <div style={{textAlign: 'center'}}>{props.children}</div>
 const AlignLeft = (props) => <div style={{textAlign: 'left'}}>{props.children}</div>
@@ -51,7 +51,7 @@ export default defineType(
           component: AlignCenter,
         },
         {title: 'Right', value: 'right', /* icon: AiOutlineAlignRight, */ component: AlignRight},
-        {title: 'Justify', value: 'justify', icon: FaAlignJustify, component: AlignJustify},
+        {title: 'Justify', value: 'justify', /* icon: FaAlignJustify, */ component: AlignJustify},
       ],
       // Annotations can be any object structure – e.g. a link or a footnote.
       annotations: [
