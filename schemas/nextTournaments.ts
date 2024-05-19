@@ -27,7 +27,7 @@ export default defineType({
       name: 'titleImage',
       title: 'Title Image',
       fieldset: 'titleImage',
-      description:"big screen title image",
+      description: 'big screen title image',
       type: 'image',
       options: {
         hotspot: true, // <-- Defaults to false
@@ -40,7 +40,7 @@ export default defineType({
       title: 'Mobile Title Image',
       type: 'image',
       fieldset: 'titleImage',
-      description:"mobile screen title image",
+      description: 'mobile screen title image',
       options: {
         hotspot: true, // <-- Defaults to false
       },
@@ -52,6 +52,32 @@ export default defineType({
       title: 'Date',
       type: 'date',
       validation: (Rule) => Rule.required(),
+    }),
+    // tlacitko registrace
+    defineField({
+      name: 'buttonLabel',
+      title: 'Button Label',
+      type: 'localeString',
+      initialValue: 'Registrace',
+      description: 'Button label (např. Registrace, Koupit vstupenku, ...)',
+      validation: (Rule) => Rule.required(),
+    }),
+    defineField({
+      name: 'url',
+      title: 'URL',
+      type: 'url',
+      validation: (Rule) =>
+        Rule.uri({
+          allowRelative: true,
+          scheme: ['http', 'https', 'mailto', 'tel'],
+        }).required(),
+    }),
+    defineField({
+      name: 'openInNewTab',
+      title: 'Open in New Tab',
+      type: 'boolean',
+      initialValue: false, // set to true if you want the default to be checked
+      description: 'Check this box if you want the link to open in a new tab.',
     }),
     //harmonogram
     defineField({
@@ -85,7 +111,6 @@ export default defineType({
       title: 'GALA',
       type: 'reference',
       to: [{type: 'gala'}],
-      validation: (Rule) => Rule.required(),
     }),
     //Superfight
     defineField({
@@ -93,7 +118,6 @@ export default defineType({
       title: 'Superfight',
       type: 'reference',
       to: [{type: 'superfight'}],
-      validation: (Rule) => Rule.required(),
     }),
     //Open
     defineField({
@@ -101,7 +125,6 @@ export default defineType({
       title: 'Open',
       type: 'reference',
       to: [{type: 'open'}],
-      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'slug',
